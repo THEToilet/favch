@@ -32,10 +32,13 @@ func main() {
 	mux.HandleFunc("/authenticate", authenticate)
 
 	// defined in route_thread.go
-//	mux.HandleFunc("/thread/new", newThread)
-//	mux.HandleFunc("/thread/create", createThread)
-//	mux.HandleFunc("/thread/post", postThread)
-//	mux.HandleFunc("/thread/read", readThread)
+	mux.HandleFunc("/thread/new", newThread)
+	mux.HandleFunc("/thread/create", createThread)
+	mux.HandleFunc("/thread/post", postThread)
+	mux.HandleFunc("/thread/read", readThread)
+
+  // defined in route_mypage.go
+  mux.HandleFunc("/mypage")
 
 	// starting up the server
 	server := &http.Server{
