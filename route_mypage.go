@@ -1,13 +1,13 @@
 package main
 
 import (
-	"./data"
+//	"./data"
 	"net/http"
 )
 
 // GET /mypage
 // Show the mypage
-func mypage(writer http.ResponeWriter, request *http.Request) {
-	t := parseTemplateFile("layout", "private.navber", "login")
+func mypage(writer http.ResponseWriter, request *http.Request) {
+	t := parseTemplateFiles("layout", "private.navbar", "mypage")
 	t.Execute(writer, nil)
 }
