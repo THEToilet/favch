@@ -40,6 +40,12 @@ func main() {
   // defined in route_mypage.go
   mux.HandleFunc("/mypage", mypage)
 
+	// defined in route_wiki.go
+	mux.HandleFunc("/wiki/new", newWiki)
+	mux.HandleFunc("/wiki/create", createWiki)
+	mux.HandleFunc("/wiki/post", postWiki)
+	mux.HandleFunc("/wiki/read", readWiki)
+
 	// starting up the server
 	server := &http.Server{
 		Addr:           config.Address,
